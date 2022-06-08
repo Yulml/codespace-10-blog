@@ -53,7 +53,8 @@ security:
     - { path: ^/admin, roles: IS_AUTHENTICATED_FULLY } #ROLE_USER
 
     - { path: ^/api/login, roles: PUBLIC_ACCESS }
-    - { path: ^/api, roles: IS_AUTHENTICATED_FULLY }
+    - { path: ^/api/espacio, roles: ROLE_SUPERADMIN } #PUBLIC_ACCESS
+    - { path: ^/api, roles: IS_AUTHENTICATED_FULLY } #PUBLIC_ACCESS
     # - { path: ^/profile, roles: ROLE_USER }
 
 when@test:
